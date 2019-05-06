@@ -1,0 +1,37 @@
+1. Get target youtube stream format and according format id:
+For instance
+cd bin
+
+$ youtube-dl https://www.youtube.com/watch?v=FQhQ-7Iaw8Y -F
+[youtube] FQhQ-7Iaw8Y: Downloading webpage
+[youtube] FQhQ-7Iaw8Y: Downloading video info webpage
+[info] Available formats for FQhQ-7Iaw8Y:
+format code  extension  resolution note
+249          webm       audio only DASH audio   57k , opus @ 50k, 1.41MiB
+250          webm       audio only DASH audio   75k , opus @ 70k, 1.85MiB
+171          webm       audio only DASH audio  115k , vorbis@128k, 2.74MiB
+140          m4a        audio only DASH audio  128k , m4a_dash container, mp4a.40.2@128k, 3.36MiB
+251          webm       audio only DASH audio  144k , opus @160k, 3.60MiB
+160          mp4        256x144    144p   64k , avc1.4d400c, 30fps, video only, 1.06MiB
+278          webm       256x144    144p  101k , webm container, vp9, 30fps, video only, 2.29MiB
+133          mp4        426x240    240p  119k , avc1.4d4015, 30fps, video only, 1.93MiB
+242          webm       426x240    240p  217k , vp9, 30fps, video only, 3.35MiB
+134          mp4        640x360    360p  333k , avc1.4d401e, 30fps, video only, 6.40MiB
+243          webm       640x360    360p  399k , vp9, 30fps, video only, 6.33MiB
+135          mp4        854x480    480p  652k , avc1.4d401f, 30fps, video only, 13.57MiB
+244          webm       854x480    480p  699k , vp9, 30fps, video only, 10.73MiB
+136          mp4        1280x720   720p 1160k , avc1.4d401f, 30fps, video only, 27.40MiB
+247          webm       1280x720   720p 1443k , vp9, 30fps, video only, 21.67MiB
+302          webm       1280x720   720p60 2172k , vp9, 60fps, video only, 32.10MiB
+298          mp4        1280x720   720p60 2224k , avc1.4d4020, 60fps, video only, 52.17MiB
+137          mp4        1920x1080  1080p 2257k , avc1.640028, 30fps, video only, 52.09MiB
+248          webm       1920x1080  1080p 2587k , vp9, 30fps, video only, 41.01MiB
+303          webm       1920x1080  1080p60 3950k , vp9, 60fps, video only, 63.74MiB
+299          mp4        1920x1080  1080p60 4127k , avc1.64002a, 60fps, video only, 85.24MiB
+18           mp4        640x360    medium , avc1.42001E, mp4a.40.2@ 96k, 10.51MiB
+43           webm       640x360    medium , vp8.0, vorbis@128k, 16.84MiB
+22           mp4        1280x720   hd720 , avc1.64001F, mp4a.40.2@192k (best)
+
+2. Download the file which seems the best(contains both audio and video, relatively higher resolution):
+
+youtube-dl https://www.youtube.com/watch?v=FQhQ-7Iaw8Y -f 22
