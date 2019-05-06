@@ -35,3 +35,17 @@ format code  extension  resolution note
 2. Download the file which seems the best(contains both audio and video, relatively higher resolution):
 
 youtube-dl https://www.youtube.com/watch?v=FQhQ-7Iaw8Y -f 22
+
+3. Another better way:
+Download the best quality audio and best quality video, then both of them will be automatically merged together.
+
+In the above case, best audio is 251, best video is 299
+So:
+
+youtube-dl https://www.youtube.com/watch?v=FQhQ-7Iaw8Y -f 299+251
+
+Remember: 
+$ youtube-dl https://www.youtube.com/watch?v=FQhQ-7Iaw8Y -f 251+299
+[youtube] FQhQ-7Iaw8Y: Downloading webpage
+[youtube] FQhQ-7Iaw8Y: Downloading video info webpage
+ERROR: The first format must contain the video, try using "-f 299+251"
